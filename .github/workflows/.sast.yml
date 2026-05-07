@@ -33,5 +33,6 @@ jobs:
             -e MIXEWAY_PROJECT_NAME=imatynia_lab_secure_app \
             -e COMMIT_ID=${{ steps.vars.outputs.sha_short }} \
             -e BRANCH=${{ steps.vars.outputs.branch }} \
+            -e MIXEWAY_FAIL_ON_VULN=true \
             -v ${{ github.workspace }}:/opt/sources \
             mixeway/scanner:latest
